@@ -18,7 +18,7 @@ var karma = require("gulp-karma");
 /*  FILE PATHS  */
 /****************/
 var paths = {
-  destDir: "dist",
+  destDir: "src",
 
   scripts: {
     src: {
@@ -28,7 +28,7 @@ var paths = {
       ]
     },
     dest: {
-      dir: "dist",
+      dir: "src",
       files: {
         unminified: "geofire.js",
         minified: "geofire.min.js"
@@ -83,7 +83,7 @@ gulp.task("scripts", function() {
     // Rename file
     .pipe(concat(paths.scripts.dest.files.minified))
 
-    // Write minified version to the distribution directory
+    // Write minified version to the srcribution directory
     .pipe(gulp.dest(paths.scripts.dest.dir));
 });
 
@@ -104,7 +104,7 @@ gulp.task("watch", function() {
   gulp.watch(["build/*", paths.scripts.src.dir + "/**/*"], ["scripts"]);
 });
 
-/* Builds the distribution files */
+/* Builds the srcribution files */
 gulp.task("build", ["scripts"]);
 
 /* Runs the "test" and "scripts" tasks by default */

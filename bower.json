@@ -18,7 +18,7 @@
     "realtime",
     "geolocation"
   ],
-  "main": "dist/geofire.js",
+  "main": "src/geofire.js",
   "ignore": [
     "**/.*",
     "src",
